@@ -1,17 +1,15 @@
-<% @links.each do |link| %>
   <div class="link row clearfix">
     <h1>
-      <%= link_to "Go here", user_path %><br>
+      <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
     </h1>
 
 
   </div>
-<% end %>
 
 
 
 
-<% @links.each do |link| %>
+<% @links.reverse_each do |link| %>
   <div class="link row clearfix">
     <h1>
       <%= link_to link.title, link %><br>
