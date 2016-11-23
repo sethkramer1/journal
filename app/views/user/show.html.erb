@@ -1,22 +1,4 @@
-  <div class="link row clearfix">
-
-
-
-    <h1>
-      <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
-    </h1>
-
-    <h1>
-      <%=link_to "How are you feeling?",:controller => 'links', :action => 'new' %>
-    </h1>
-
-
-  </div>
-
-
-
-
-<% @links.reverse_each do |link| %>
+<% @links.each do |link| %>
   <div class="link row clearfix">
     <h1>
       <%= link_to link.title, link %><br>

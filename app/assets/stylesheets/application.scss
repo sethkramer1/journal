@@ -33,6 +33,7 @@
  #main_content {
  	#content {
  		float: none;
+    text-align:center;
  	}
  	padding-bottom: 100px;
  	.link {
@@ -58,3 +59,13 @@
  		}
  	}
  }
+
+ #emoji_drop{
+   font-size:100px;
+ }
+
+
+ .navbar-default {
+    background-color: #f0f5f9;
+    border-color: #c9d6de;
+}
