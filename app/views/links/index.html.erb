@@ -2,17 +2,14 @@
 
 
 
-    <h1>
-      <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
-    </h1>
+    <p>
+  <b>
+      <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
+  </b>
 
-    <h1>
-      <%=link_to "How are you feeling?",:controller => 'links', :action => 'new' %>
-    </h1>
+    <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
 
-
-  </div>
-
+  </p>
 
 
 
@@ -22,8 +19,9 @@
       <%= link_to link.title, link %><br>
     </h1>
     <h4>  <%= link.description %><br></h4>
-    <p><small class="author">Submitted <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.username %></small>
-    </p>
+    <p><small class="author">Submitted <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.username %>
+
+    <br> <%= link_to "#{link.comments.count} comments", link %> </p></small>
 
 
 

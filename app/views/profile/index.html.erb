@@ -1,8 +1,12 @@
 <div class="link row clearfix">
-  <h1>
-    <%=link_to "Everyone's Emojis",:controller => 'links', :action => 'index' %>
+  <p>
 
-  </h1>
+    <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
+
+<b>
+  <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
+</b>
+</p>
 
 
 </div>
