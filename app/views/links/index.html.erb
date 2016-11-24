@@ -1,7 +1,7 @@
   <div class="link row clearfix">
 
 
-
+    <% if user_signed_in? -%>
     <p>
   <b>
       <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
@@ -10,6 +10,13 @@
     <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
 
   </p>
+
+     <%else%>
+     <h2> <%= link_to "How's it going?", new_link_path %></h2>
+
+
+<%end%>
+
 
 
 
