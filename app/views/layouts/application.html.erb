@@ -6,35 +6,44 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<header class="navbar navbar-default" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to "Emoji Journal", root_path %></div>
-        <nav class="collapse navbar-collapse navbar-ex1-collapse">
-        	<% if user_signed_in? -%>
-						<ul class="nav navbar-nav navbar-right">
-							<li><%= link_to 'Submit status', new_link_path %></li>
-							<li><%= link_to 'Account', edit_user_registration_path %></li>
-							<li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-						</ul>
-					<% else -%>
-						<ul class="nav navbar-nav pull-right">
-							<li><%= link_to 'Sign up', new_user_registration_path %></li>
-							<li><%= link_to 'Sign in', new_user_session_path %></li>
-						</ul>
-					<% end -%>
-        </nav>
-      </div>
-    </div>
-  </header>
+
+
+  <div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div id="logo" class="navbar-brand"><%= link_to "Emoji Journal", root_path %></div>
+    </div> <!-- end div class="navbar-header" -->
+    <div class="collapse navbar-collapse">
+        <% if user_signed_in? -%>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Submit status', new_link_path %></li>
+            <li><%= link_to 'Account', edit_user_registration_path %></li>
+            <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+          </ul>
+        <% else -%>
+          <ul class="nav navbar-nav pull-right">
+            <li><%= link_to 'Sign up', new_user_registration_path %></li>
+            <li><%= link_to 'Sign in', new_user_session_path %></li>
+          </ul>
+        <% end -%>
+
+    </div> <!-- end div class="collapse navbar-collapse" -->
+  </div> <!-- end div class="container" -->
+</div> <!-- end div class="navbar navbar-default navbar-fixed-top" -->
 
 	<div id="main_content" class="container">
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert alert-info") %>
 		<% end %>
 
-			<div id="content" class="col-md-9 center-block">
+			<div id="content" class="col-md-10 center-block">
 				<%= yield %>
 			</div>
 		</div>
