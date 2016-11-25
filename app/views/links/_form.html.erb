@@ -12,20 +12,20 @@
   <% end %>
 
   <div class="form-group">
+      <h1>
+      💩 😊 😡 😏 🙃
+    </h1>
     <h1>
-    💩 😊 😡 😏 🙃
-  </h1>
-  <h1>
-    <%= f.select :title, Link::EMOJI_OPTIONS %>
-  </h1>
-  </div>
-  <div class="form-group">
-    <h5> Write a sentence or two why.</h5>
-    <%= f.text_field :description, class: "form-control" %>
-  </div>
-  <br>
-  <div class="form-group">
-    <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
-  </div>
+      <%= f.select :title, Link::EMOJI_OPTIONS %>
+    </h1>
+    </div>
+    <div class="form-group">
+      <h5> Write a sentence or two why.</h5>
+      <%= f.text_field :description, class: "form-control" %>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+    </div>
 
-<% end %>
+  <% end %>
