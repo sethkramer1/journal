@@ -1,6 +1,7 @@
   <div class="link row clearfix">
 
 
+
     <%= render 'form' %>
 
     <% if user_signed_in? -%>
@@ -23,7 +24,6 @@
 
 
 
-
 <% @links.reverse_each do |link| %>
   <div class="link row clearfix">
     <h1>
@@ -38,3 +38,5 @@
 
   </div>
 <% end %>
+
+<%= will_paginate @links %>
