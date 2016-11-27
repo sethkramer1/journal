@@ -33,7 +33,7 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to action: "index", notice: 'Post was successfully created.' }
+        format.html { redirect_to profile_index_path, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @link }
       else
         format.html { render :new }
