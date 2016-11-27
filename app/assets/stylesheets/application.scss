@@ -26,15 +26,50 @@
  	letter-spacing: -1px;
  	padding: 15px 0;
  	a {
- 		color: #2F363E;
+ 		color: #FDD692;
  	}
  }
 
+ .navbar {
+     position: relative;
+ }
+ .brand {
+     position: absolute;
+     left: 50%;
+     margin-left: -50px !important;  /* 50% of your logo width */
+     display: block;
+ }
+
+  .navbar-default {
+   background-color: #fff !important;
+   border-color: white;
+
+   .navbar-text {
+     color: #FDD692; }
+   .navbar-nav {
+     > li {
+       > a {
+         color: #FDD692;
+         &:hover,  &:focus {
+           color: white; }}}
+     > .active {
+       > a, > a:hover, > a:focus {
+         color: #FDD692;
+         background-color: white; }}
+     > .open {
+       > a, > a:hover, > a:focus {
+         color: #FDD692;
+         background-color: white; }}}
+       }
+
+
  #main_content {
  	#content {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align:center;
  		float: none;
+    background-color: #fff;
  	}
- 	padding-bottom: 60px;
  	.link {
  		padding: .5em 1em;
  		border-bottom: 1px solid #e9e9e9;
@@ -64,10 +99,13 @@
  }
 
 
- .navbar-default {
+ .navbar {
+   .navbar-default {
     background-color: #f0f5f9;
     border-color: #c9d6de;
-}
+    text-align:center !important;
+
+}}
 
 #label{
   word-spacing:30px;
@@ -78,6 +116,15 @@
 
 
     cursor: pointer;
+}
+
+.heading{
+  font-family: 'Bungee', cursive;
+  font-size:40px;
+}
 
 
+.top-bar{
+  border:1px solid #E0E3DA;
+  padding:50px;
 }

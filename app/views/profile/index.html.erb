@@ -1,5 +1,14 @@
 <div class="link row clearfix">
 
+  <p>
+
+    <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
+
+  <b>
+  <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
+  </b>
+  </p>
+
   <% if @counting == 1 %>
  <p>
    Awesome, first post! 💪
@@ -18,32 +27,12 @@
 </p>
   <% end %>
 
-  <% if @counting > 4 %>
+  <% if @counting >3  %>
  <p>
-   More than 4 posts. You're on fire! 🔥🔥🔥
+   More than 3 posts. You're on fire! 🔥🔥🔥
 </p>
   <% end %>
 
-<%= @counting  %>
-
-
-
-
-
-
-
-
-
-
-
-  <p>
-
-    <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
-
-<b>
-  <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
-</b>
-</p>
 
 
 </div>

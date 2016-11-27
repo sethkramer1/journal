@@ -1,10 +1,12 @@
-  <div class="link row clearfix">
+  <div class=" row clearfix">
 
 
 
-    <%= render 'form' %>
 
     <% if user_signed_in? -%>
+
+      <%= render 'form' %>
+
     <p>
   <b>
       <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
@@ -14,10 +16,21 @@
 
   </p>
 
+
+
+
      <%else%>
-     <h2> <%= link_to "How are you?", new_link_path %></h2>
-    <br>
-     <h3> Emoji-feed </h3>
+
+      <%= render 'form' %>
+      <br>
+      <br>
+
+
+
+      <h2>
+
+    Here's how everyone else feels today
+  </h2>
 
 
 <%end%>
