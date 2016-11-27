@@ -1,13 +1,6 @@
 <div class="link row clearfix">
 
-  <p>
 
-    <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
-
-  <b>
-  <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
-  </b>
-  </p>
 
   <% if @counting == 1 %>
  <p>
@@ -34,8 +27,17 @@
   <% end %>
 
 
+  <%=link_to "Post New Emoji", links_path%>
+
+
 
 </div>
+<br>
+
+<div class="heading2">
+  My History
+</div>
+
 
 
 <% @links.each do |link| %>

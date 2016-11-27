@@ -26,7 +26,10 @@
  	letter-spacing: -1px;
  	padding: 15px 0;
  	a {
- 		color: #FDD692;
+ 		color: #0378c2;
+    text-decoration: none;
+    &:hover,  &:focus {
+      color: #0378c2; }
  	}
  }
 
@@ -42,30 +45,30 @@
 
   .navbar-default {
    background-color: #fff !important;
-   border-color: white;
+   border-bottom: solid;
 
    .navbar-text {
-     color: #FDD692; }
+     color: #0378c2; }
    .navbar-nav {
      > li {
        > a {
-         color: #FDD692;
+         color: #0378c2;
          &:hover,  &:focus {
-           color: white; }}}
+           color: #0378c2; }}}
      > .active {
        > a, > a:hover, > a:focus {
-         color: #FDD692;
-         background-color: white; }}
+         color: #0378c2;
+         background-color: #0378c2; }}
      > .open {
        > a, > a:hover, > a:focus {
-         color: #FDD692;
-         background-color: white; }}}
+         color: #0378c2;
+         background-color: #0378c2; }}}
        }
 
 
  #main_content {
  	#content {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-align:center;
  		float: none;
     background-color: #fff;
@@ -99,13 +102,6 @@
  }
 
 
- .navbar {
-   .navbar-default {
-    background-color: #f0f5f9;
-    border-color: #c9d6de;
-    text-align:center !important;
-
-}}
 
 #label{
   word-spacing:30px;
@@ -125,6 +121,54 @@
 
 
 .top-bar{
-  border:1px solid #E0E3DA;
-  padding:50px;
+  padding:20px;
+}
+
+.btn {
+
+	background-color:#0378c2;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #0378c2;
+	display:inline-block;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+
+.btn:active {
+	position:relative;
+	top:1px;
+
+
+}
+
+.mybutton {
+
+	background-color:#0378c2;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #0378c2;
+	display:inline-block;
+	color:#ffffff;
+	font-size:12px;
+	padding:12px 30px;
+	text-decoration:none;
+}
+
+.mybutton:active {
+	position:relative;
+	top:1px;
+
+
+}
+
+.heading2{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Bungee', cursive;
+
 }

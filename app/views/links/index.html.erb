@@ -3,37 +3,27 @@
 
 
 
-    <% if user_signed_in? -%>
 
-      <%= render 'form' %>
+    <%= render 'form' %>
 
-    <p>
-  <b>
-      <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
-  </b>
+    <div class="heading2">
+      Global Feed
 
-    <%=link_to "My Emojis",:controller => 'profile', :action => 'index' %>
-
-  </p>
+  </div>
 
 
 
 
-     <%else%>
-
-      <%= render 'form' %>
-      <br>
-      <br>
 
 
 
-      <h2>
 
-    Here's how everyone else feels today
-  </h2>
+      <h5>
+
+    Comment to show your support!
+  </h5>
 
 
-<%end%>
 
 
 
