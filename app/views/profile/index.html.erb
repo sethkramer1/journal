@@ -1,4 +1,41 @@
 <div class="link row clearfix">
+
+  <% if @counting == 1 %>
+ <p>
+   Awesome, first post! 💪
+</p>
+  <% end %>
+
+  <% if @counting == 2 %>
+ <p>
+   You're amazing! 😍
+</p>
+  <% end %>
+
+  <% if @counting == 3 %>
+ <p>
+   You. Rock. 🙌
+</p>
+  <% end %>
+
+  <% if @counting > 4 %>
+ <p>
+   More than 4 posts. You're on fire! 🔥🔥🔥
+</p>
+  <% end %>
+
+<%= @counting  %>
+
+
+
+
+
+
+
+
+
+
+
   <p>
 
     <%=link_to "All Emojis",:controller => 'links', :action => 'index' %>
@@ -12,7 +49,7 @@
 </div>
 
 
-<% @links.reverse_each do |link| %>
+<% @links.each do |link| %>
 <div class="link row clearfix">
   <h1>
     <%= link_to link.title, link %><br>
