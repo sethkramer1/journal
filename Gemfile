@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.1.0'
 gem 'filterrific'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
   gem 'sqlite3'

@@ -97,8 +97,8 @@
  	}
  }
 
- #emoji_drop{
-   font-size:100px;
+ .emoji_drop{
+   font-size:50px;
  }
 
 
@@ -124,7 +124,7 @@
   padding:20px;
 }
 
-.btn {
+.btn-lg {
 
 	background-color:#0378c2;
 	-moz-border-radius:28px;
@@ -133,9 +133,17 @@
 	border:1px solid #0378c2;
 	display:inline-block;
 	color:#ffffff;
-	font-size:17px;
+	font-size:14px;
 	padding:16px 31px;
 	text-decoration:none;
+}
+
+.btn-sm{
+	font-size:10px;
+  background-color:#f0f0f0;
+  margin-top:10px;
+
+
 }
 
 .btn:active {

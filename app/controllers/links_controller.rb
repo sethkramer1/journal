@@ -5,15 +5,27 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.order("created_at DESC").paginate(:page => params[:page], per_page: 7)
+
+    @links = Link.all.order("created_at DESC").paginate(:page => params[:page], per_page: 9)
+    if params[:search]
+      @links = Link.search(params[:search]).order("created_at DESC").paginate(:page => params[:page], per_page: 9)
+    else
+      @links = Link.all.order("created_at DESC").paginate(:page => params[:page], per_page: 9)
+    end
     @link = Link.new
-
-
-
+    @counting = Link.all.count
   end
 
   # GET /links/1
   # GET /links/1.json
+
+
+
+
+
+
+
+
   def show
   end
 
@@ -65,6 +77,21 @@ class LinksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+def upvote
+  @link = Link.find(params[:id])
+  @link.upvote_by current_user
+  redirect_to :back
+end
+
+def downvote
+  @link = Link.find(params[:id])
+  @link.downvote_by current_user
+  redirect_to :back
+end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
