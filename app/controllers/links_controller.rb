@@ -14,6 +14,7 @@ class LinksController < ApplicationController
     end
     @link = Link.new
     @counting = Link.all.count
+
   end
 
   # GET /links/1

@@ -24,10 +24,19 @@ Comment to show your support. <%= @counting %> emojis shared so far!
 </h5>
 <div class="form-group">
 
+  <%= form_tag(links_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search] %>
+
+   <%= submit_tag "Filter by tag", class: " btn-sm"%>
+
+  <% end %>
+
 
 <%= form_tag(links_path, :method => "get", id: "search-form") do %>
 <%= select_tag "search", options_for_select([['💩'] ,['😊'],['😡'],['😏'],['🙃']])%>
- <%= submit_tag "Filter", class: " btn-sm"%>
+
+ <%= submit_tag "Filter by emoji", class: " btn-sm"%>
+
 <% end %>
 </div>
 
