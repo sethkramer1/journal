@@ -37,7 +37,10 @@
 <div class="heading2">
   My History
 </div>
-
+<%= form_tag(profile_index_path, :method => "get", id: "search-form") do %>
+<%= select_tag "search", options_for_select([['💩'] ,['😊'],['😡'],['😏'],['🙃']])%>
+ <%= submit_tag "Filter", class: " btn-sm"%>
+<% end %>
 
 
 <% @links.each do |link| %>
@@ -57,3 +60,9 @@
 
 
 <%= will_paginate @links %>
+
+
+<% if @links.blank? %>
+<br>
+  <h4>There are no journals with the <%= params[:search] %> emotion.</h4>
+  <%end%>
